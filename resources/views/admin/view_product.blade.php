@@ -123,17 +123,7 @@
                 </tr>
 
                 @endforeach
-
-
-
-              
               </table>
-
-
-
-
-
-
 
             </div>
 
