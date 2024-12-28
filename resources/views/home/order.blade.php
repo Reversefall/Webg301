@@ -47,42 +47,29 @@
     <!-- header section strats -->
     @include('home.header') 
 
-
     <div class="div_center">
-    	
     	<table>
     		<tr>
     			<th>Product Name</th>
     			<th>price</th>
+				<th>Payment Status</th>
     			<th>Delivery Status</th>
     			<th>Image</th>
     		</tr>
-
-
     		@foreach($order as $order)
-
     		<tr>
     			<td>{{$order->product->title}}</td>
     			<td>{{$order->product->price}}</td>
+				<td>{{$order->payment_status}}</td>
     			<td>{{$order->status}}</td>
     			<td>
     				<img height="100" width="150" src="products/{{$order->product->image}}">
     			</td>
     		</tr>
-
     		@endforeach
-
-
-
     	</table>
-
     </div>
-
-
 </div>
-
-	 
-	
 	@include('home.footer')
 </body>
 </html>

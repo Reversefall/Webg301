@@ -60,55 +60,29 @@
               <input type="search" name="search">
               <input type="submit" class="btn btn-secondary" value="Search">
             </form>
-
-
             <div class="div_deg">
-
-
-              
               <table class="table_deg">
-
                 <tr>
-
                   <th>Product Title</th>
-
                   <th>Description</th>
-
                   <th>Category</th>
-
                   <th>Price</th>
-
                   <th>Quantity</th>
-
                   <th>Image</th>
-
                   <th>Edit</th>
-
                   <th>Delete</th>
-
-
-
                 </tr>
-
 
                 @foreach($product as $products)
 
-                <tr>
-                  
+                <tr>           
                   <td>{{$products->title}}</td>
-
                   <td>{!!Str::limit($products->description,50)!!}</td>
-
                   <td>{{$products->category}}</td>
-
                   <td>{{$products->price}}</td>
-
                   <td>{{$products->quantity}}</td>
-
-                  <td>
-                    
+                  <td>                   
                     <img height="120" width="120" src="products/{{$products->image}}">
-
                   </td>
 
                   <td>
@@ -118,7 +92,6 @@
                   <td>
                     <a class="btn btn-danger" onclick="confirmation(event)" href="{{url('delete_product',$products->id)}}">Delete</a>
                   </td>
-
                 </tr>
 
                 @endforeach
