@@ -212,15 +212,10 @@ class HomeController extends Controller
         foreach($cart_remove as $remove)
         {
             $data = Cart::find($remove->id);
-
             $data->delete();
-
         }
- toastr()->timeOut(10000)->closeButton()->addSuccess('Product Ordered Successfully');
-
- return redirect()->back();
-
-
+            toastr()->timeOut(10000)->closeButton()->addSuccess('Product Ordered Successfully');
+            return redirect()->back();
     }
 
 
@@ -297,13 +292,10 @@ class HomeController extends Controller
         foreach($cart_remove as $remove)
         {
             $data = Cart::find($remove->id);
-
             $data->delete();
-
         }
- toastr()->timeOut(10000)->closeButton()->addSuccess('Product Ordered Successfully');
-
- return redirect('mycart');
+            toastr()->timeOut(10000)->closeButton()->addSuccess('Product Ordered Successfully');
+            return redirect('mycart');
     }
 
 
@@ -323,15 +315,10 @@ class HomeController extends Controller
         $count = Cart::where('user_id',$userid)->count();
 
         }
-
         else
         {
             $count = '';
         }
-
-
-        
-
         return view('home.shop',compact('product','count'));
     }
 
@@ -339,8 +326,6 @@ class HomeController extends Controller
 
      public function why()
     {   
-     
-
         if(Auth::id())
         {
 
@@ -356,18 +341,12 @@ class HomeController extends Controller
         {
             $count = '';
         }
-
-
-        
-
         return view('home.why',compact('count'));
     }
 
 
     public function testimonial()
     {   
-     
-
         if(Auth::id())
         {
 
@@ -383,18 +362,12 @@ class HomeController extends Controller
         {
             $count = '';
         }
-
-
-        
-
         return view('home.testimonial',compact('count'));
     }
 
 
     public function contact()
     {   
-     
-
         if(Auth::id())
         {
 
@@ -410,10 +383,6 @@ class HomeController extends Controller
         {
             $count = '';
         }
-
-
-        
-
         return view('home.contact',compact('count'));
     }
 

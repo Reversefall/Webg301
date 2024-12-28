@@ -5,7 +5,6 @@
 
 
    <style type="text/css">
-     
     .div_deg
     {
       display: flex;
@@ -128,7 +127,6 @@
             </div>
 
             <div class="div_deg">
-
               {{$product->onEachSide(1)->links()}}
               
             </div>

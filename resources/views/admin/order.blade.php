@@ -2,16 +2,12 @@
 <html>
   <head> 
    @include('admin.css')
-
    <style type="text/css">
-     
      table
      {
       border: 2px solid skyblue;
       text-align: center;
-
      }
-
      th
      {
 
@@ -38,29 +34,19 @@
       align-items: center;
      }
    </style>
-
-
   </head>
   <body>
-
     @include('admin.header')
-    
+  
    @include('admin.sidebar')
       <!-- Sidebar Navigation end-->
       <div class="page-content">
         <div class="page-header">
           <div class="container-fluid">
-
-
-
               <h3>All Orders</h3>
-
               <br>
               <br>
-
-
        <div class="table_center">
-
            <table>
              <tr>
                <th>Customer name</th>
@@ -82,49 +68,29 @@
                <td>{{$data->phone}}</td>
                <td>{{$data->product->title}}</td>
                <td>{{$data->product->price}}</td>
-               <td>
-                 
+               <td>                
                 <img width="150" src="products/{{$data->product->image}}">
-
                </td>
-
                <td>{{$data->payment_status}}</td>
-
-
                <td>
-                  
                   @if($data->status == 'in progress')
-
                   <span style="color:red">{{$data->status}}</span>
-
                   @elseif($data->status == 'On the way')
-
-
                   <span style="color:skyblue;">{{$data->status}}</span>
-
                   @else
-
                   <span style="color:yellow;">{{$data->status}}</span>
-
                   @endif
-
-
                </td>
-
                <td>
-
                  <a class="btn btn-primary" href="{{url('on_the_way',$data->id)}}">On the way</a>
 
                  <a class="btn btn-success" href="{{url('delivered',$data->id)}}">Delivered</a>
                </td>
              </tr>
-
              @endforeach
+
            </table>
-
          </div>
-
-
           </div> 
       </div>
     </div>

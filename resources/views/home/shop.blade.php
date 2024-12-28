@@ -11,10 +11,7 @@
   <div class="hero_area">
     <!-- header section strats -->
     @include('home.header') 
-    
   </div>
- 
-
   @include('home.product')
 
 
